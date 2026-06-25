@@ -169,14 +169,6 @@ Das vollständige Paper mit Beweisen, Pseudocode, Laufzeitanalyse und Anwendungs
 
 ---
 
-## Autor
-
-**Stephan Epp** – Senior Software Developer & Wissenschaftler  
-Universität Bielefeld  
-[stephan_epp@uni-bielefeld.de](mailto:stephan_epp@uni-bielefeld.de)
-
----
-
 ## Lizenz
 
 Dieses Repository ist urheberrechtlich geschützt. Alle Rechte vorbehalten.  
