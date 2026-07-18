@@ -1,9 +1,6 @@
 # Subgraph Algorithmus
 
-> **Epp, S. (2026).** *Der Subgraph Algorithmus – O(n³) Graphvergleich mittels injizierter Spaltensignaturen und zyklischer Rotationen.*  
-> Universität Bielefeld. [`science/subgraph.pdf`](science/subgraph.pdf)
-
----
+Der Subgraph Algorithmus – O(n³) Graphvergleich mittels injizierter Spaltensignaturen und zyklischer Rotationen.
 
 ## Überblick
 
@@ -14,8 +11,6 @@ Der **Subgraph Algorithmus** ist ein effizienter O(n³)-Algorithmus zum Vergleic
 Hierzu wird ein neuartiger Ansatz über **injizierte Spaltensignaturen** und **zyklische Rotationen** eingesetzt – ohne erschöpfende Permutationssuche (die O(n!) wäre).
 
 **Kernaussage:** Enthält G' den Graphen G als Teilgraph, so wird G verworfen, da G' mehr strukturelle Information trägt.
-
----
 
 ## Algorithmus
 
@@ -62,8 +57,6 @@ Für jede Rotation wird geprüft, ob die Signatursequenz von G als **längste ge
 | n Rotationen × O(n²) Vergleich | O(n³) |
 | **Gesamt** | **O(n³)** |
 
----
-
 ## Rückgabewerte
 
 | Ergebnis | Bedeutung |
@@ -73,33 +66,11 @@ Für jede Rotation wird geprüft, ob die Signatursequenz von G als **längste ge
 | `keep_both` | Kein Teilgraph-Verhältnis → beide werden behalten |
 | `equal_keep_A/B` | Strukturell gleich → der kantenstärkere Graph wird behalten |
 
----
-
-## Projektstruktur
-
-```
-Subgraph/
-├── src/
-│   ├── __init__.py
-│   └── subgraph.py          # Kernimplementierung
-├── tests/
-│   └── test_subgraph.py     # Testsuite (100 % Coverage)
-├── science/
-│   ├── subgraph.tex         # LaTeX-Paper (Epp 2026)
-│   └── subgraph.pdf         # Kompiliertes Paper
-├── doc/
-│   └── coverage/            # HTML-Coverage-Report
-├── pyproject.toml
-└── README.md
-```
-
----
-
 ## Installation
 
 ```bash
-git clone https://github.com/hjstephan86/Subgraph.git
-cd Subgraph
+git clone https://github.com/hjstephan86/subgraph.git
+cd subgraph
 pip install -e ".[dev]"
 ```
 
@@ -107,8 +78,6 @@ pip install -e ".[dev]"
 - Python ≥ 3.8
 - numpy ≥ 1.24.0
 - pytest, pytest-cov (für Tests)
-
----
 
 ## Verwendung
 
@@ -147,8 +116,6 @@ for key, value in info.items():
     print(f"{key}: {value}")
 ```
 
----
-
 ## Tests
 
 ```bash
@@ -157,19 +124,9 @@ pytest
 
 Der Testlauf erzeugt automatisch einen HTML-Coverage-Report unter `doc/coverage/index.html`.
 
-**Aktuelle Abdeckung:** 100 %
-
----
 
 ## Wissenschaftlicher Hintergrund
 
 Der Subgraph Algorithmus bildet das formale Fundament einer Reihe domänenübergreifender Arbeiten (Physik, Ingenieurwesen, Biologie, Informatik, Mathematik), die alle unter [`hjstephan86/science`](https://github.com/hjstephan86/science) katalogisiert sind.
 
 Das vollständige Paper mit Beweisen, Pseudocode, Laufzeitanalyse und Anwendungsbeispielen ist unter [`science/subgraph.pdf`](science/subgraph.pdf) verfügbar.
-
----
-
-## Lizenz
-
-Dieses Repository ist urheberrechtlich geschützt. Alle Rechte vorbehalten.  
-© 2026 Stephan Epp
